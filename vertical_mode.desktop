@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Vertical Mode Toggle
+Comment=System tray toggle for Steam Deck portrait mode with on-screen keyboard
+Exec=python3 vertical_mode.py
+Icon=video-display
+Terminal=false
+Categories=Utility;Accessibility;
+X-KDE-autostart-phase=2
