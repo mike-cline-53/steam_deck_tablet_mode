@@ -20,7 +20,20 @@ Designed for holding the Deck vertically with the left grip at the bottom -- put
 
 ## Quick Start
 
-### 1. Transfer files to the Steam Deck
+### One-liner install
+
+Open Konsole on the Steam Deck (in Desktop Mode) and run:
+
+```bash
+git clone https://github.com/mike-cline-53/steam_deck_tablet_mode.git ~/steam_deck_tablet_mode && cd ~/steam_deck_tablet_mode && bash install.sh
+```
+
+> **Note:** If you hit pacman keyring errors, run this first:
+> `sudo pacman-key --init && sudo pacman-key --populate archlinux holo`
+
+### Manual install
+
+#### 1. Transfer files to the Steam Deck
 
 From your computer (replace `<DECK_IP>` with your Deck's IP address):
 
@@ -31,7 +44,7 @@ scp -r . deck@<DECK_IP>:~/Documents/steamdeck/
 > To find the Deck's IP: open Konsole on the Deck and run `ip -4 addr show wlan0`.
 > SSH must be started first: `sudo systemctl start sshd` (and set a password with `passwd` if you haven't).
 
-### 2. Run the installer
+#### 2. Run the installer
 
 On the Steam Deck (via SSH or Konsole):
 
@@ -48,7 +61,7 @@ This will:
 - Configure Onboard docking (bottom edge, DarkRoom theme)
 - Add the tray toggle to KDE Autostart
 
-### 3. Use it
+#### 3. Use it
 
 ```bash
 python3 vertical_mode.py
